@@ -1,0 +1,271 @@
+
+
+body{
+
+    background:  linear-gradient(90deg, rgba(253,196,230,1) 7%, rgba(253,203,233,1) 17%, rgba(254,209,236,1) 25%, rgba(254,216,239,1) 31%, rgba(254,222,242,1) 38%, rgba(255,229,245,1) 49%, rgba(255,235,240,1) 74%),
+    url(imagenes/kitty.gif);
+    background-blend-mode: soft-light;
+    background-position: center;
+    
+    
+
+  
+    
+}
+
+#contenido.oculto {
+  display: none; /* Oculta solo el contenido dentro del contenedor */
+}
+
+
+/*IFRAME DE SPOTIFY*/
+
+    .canciones{
+
+        justify-content: center;
+        display: flex;
+        gap: 35px;
+        align-items: center;
+        border-style: solid;
+        border-color: #f7d3fb;
+        padding: 7px;
+        margin-left: 150px;
+        margin-right: 150px;
+        border-radius: 15px;
+        background: linear-gradient(90deg, rgba(253,196,230,1) 7%, rgba(253,203,233,1) 17%, rgba(254,209,236,1) 25%, rgba(254,216,239,1) 31%, rgba(254,222,242,1) 38%, rgba(255,229,245,1) 49%, rgba(255,235,240,1) 74%);
+    }
+
+    .canciones iframe{
+
+        width: 650px;
+        
+    }
+
+/*CONTENDER PRINCIPAL*/
+
+.letter-container1 {
+  margin-right: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 55px;
+  gap: 20px;
+  }
+
+/*Estilos de las fotos en los contenedores*/
+
+.foto img{
+
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    perspective: 1000px;
+    border-radius: 15px;
+    background-position: center;
+    background-size: cover;
+    filter: grayscale(30%) sepia(20%) hue-rotate(330deg) brightness(1.1) saturate(90%);
+    
+}
+
+
+
+/* ESTILOS DE LOS CONTENDORES QUE TIENEN LAS FOTOS*/
+
+
+.foto {
+    width: 150px;
+    height: 200px;
+    cursor: pointer;
+    perspective: 1000px;
+    transition:  0.3s ease;
+    margin-right: 35px;
+    margin-left: 35px;
+
+}
+
+
+
+.foto:hover{
+    transform: scale(1.1);
+
+}
+
+.front, .fotoinside {
+    width: 150px;
+    height: 200px;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+    transform-origin: center;
+    margin-right: 35px;
+    margin-left: 35px;
+    color: #ffffff;
+    text-shadow: rgb(239, 193, 254) 2px 2px;
+  }
+
+  .fotoinside {
+    background: rgb(245,184,220);
+    background: linear-gradient(90deg, rgba(245,184,220,1) 20%, rgba(249,198,233,1) 49%, rgba(253,211,245,1) 82%);
+    padding: 5px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: rgb(250, 234, 251);
+    transform: rotateY(180deg);
+    margin-right: 35px;
+    margin-left: 35px;
+  }
+
+  .foto.open .front {
+    transform: rotateY(-180deg);
+  }
+  
+  .foto.open .fotoinside {
+    transform: rotateY(0);
+  }
+
+
+
+/* TODO LO DE LA CARTA*/
+
+  
+  .letter {
+    width: 300px;
+    height: 400px;
+    cursor: pointer;
+    perspective: 1000px;
+    transition: 0.3s ease;
+    transform-origin: center;
+    margin-right: 35px;
+    margin-left: 35px;
+  }
+
+  .letter:hover{
+    width: 300px;
+    height: 400px;
+    transform: scale(1.1);
+  }
+  
+  .front, .inside {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+    
+  }
+  
+  .front {
+    background: rgb(249,200,229);
+    background: linear-gradient(90deg, rgba(249,200,229,1) 20%, rgba(249,198,233,1) 49%, rgba(253,211,245,1) 82%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #ffffff;
+    text-shadow: rgb(239, 193, 254) 2px 2px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: rgb(250, 234, 251);
+  }
+  
+  .inside {
+
+    width: 300px;
+    height: 400px;
+    background: rgb(245,184,220);
+    background: linear-gradient(90deg, rgba(245,184,220,1) 20%, rgba(249,198,233,1) 49%, rgba(253,211,245,1) 82%);
+    padding: 20px;
+    font-size: 16px;
+    color: #ffffff;
+    text-shadow: rgb(239, 193, 254) 2px 2px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: rgb(250, 234, 251);
+    transform: rotateY(180deg);
+    
+  }
+  
+  .letter.open .front {
+    transform: rotateY(-180deg) scale(1); /* Agrega el scale(1) para evitar expansión */
+    }
+
+    .letter.open .inside {
+
+    transform: rotateY(0) scale(1); /* Mantiene el tamaño al girar */
+    }
+
+
+
+
+/*ESTILOS DE TEXTO H1*/
+
+h1{
+
+    text-align: center;
+    font-size: 50px;
+    font-family: "Tiny5", sans-serif, serif;
+    color: #ffffff;
+    text-shadow: #ec9fff 4px 4px;
+    letter-spacing: 2px;
+}
+
+h2{
+
+    text-align: center;
+    font-size: 70px;
+    font-family: "Tiny5", sans-serif, serif;
+    color: #ffffff;
+    text-shadow: #e993ff 4px 4px;
+    letter-spacing: 2px;
+}
+
+/*BOTON*/
+
+.boton{
+
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+
+button{
+  margin-top: 75px;
+  background: rgb(245,184,220);
+  background: linear-gradient(90deg, rgba(245,184,220,1) 20%, rgba(249,198,233,1) 49%, rgba(253,211,245,1) 82%);
+  border-color: #ffffff;
+  border-style: solid;
+  height: 60px;
+  width: 190px;
+  justify-content: center;
+  text-align: center;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: "Tiny5", sans-serif, serif;
+  color: #ffffff;
+  text-shadow: #e993ff 2px 2px;
+  letter-spacing: 2px;
+  margin-right: 90px;
+  margin-left: 75px;
+  transition: transform 0.3s ease;
+}
+
+button:hover{
+
+  transform: scale(1.1);
+}
+
+
+/* SdsaS*/
+
+#iniciarBtn {
+
+  position: fixed; /* Posición fija para que siempre esté en el centro de la pantalla */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centra el botón */
+  padding: 15px 30px;
+  font-size: 20px;
+}
+
